@@ -139,10 +139,7 @@ function toggle() {
     totmov.innerHTML = "Total Moves: " + mov;   
 }
 
-/*var score = ((minimumTime/seconds)*(minimumMoves/mov))*highestScorePossible;
-var scores = (((1/seconds).tofixed(3))*((1/mov).toFixed(3)))*3000;
-    scor = ((3000/seconds)*(3000/mov)).tofixed(0);
-    total = seconds;*/
+/*var score = ((minimumTime/seconds)*(minimumMoves/mov))*highestScorePossible; */
 
     function timer() {
         seconds++;
