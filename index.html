@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color tiles by visakan </title>
+    <link rel="icon" href="https://inductions.delta.nitt.edu/favicon.ico" >
+    <link href="https://fonts.googleapis.com/css2?family=Mate+SC&display=swap" rel="stylesheet">
+    <link href="style.css"  type="text/css" rel="stylesheet">
+</head>
+<body>
+<div class="screen" id="screen">
+ <h1 id="title">COLOR </h1>    
+ <h2 id="title">TILES</h2>
+ <div class="game">
+    <div class="small-grid">
+      
+        <div class="items"></div>
+        <div class="items"></div>
+        <div class="items"></div>  
+        <div class="items"></div>
+        <div class="items"></div>
+        <div class="items"></div>
+        <div class="items"></div>
+        <div class="items"></div>
+        <div class="items"></div>
+      
+    </div>
+   <div class="big-grid">
+     <button class="btns btn1" id="0" onclick="check(0)"></button>
+     <button class="btns btn2" id="1" onclick="check(1)"></button>
+     <button class="btns btn3" id="2" onclick="check(2)"></button>
+     <button class="btns btn4" id="3" onclick="check(3)"></button>
+     <button class="btns btn5" id="4" onclick="check(4)"></button>
+     <button class="btns btn6" id="5" onclick="check(5)"></button>
+     <button class="btns btn7" id="6" onclick="check(6)"></button>
+     <button class="btns btn8" id="7" onclick="check(7)"></button>
+     <button class="btns btn9" id="8" onclick="check(8)"></button>
+     <button class="btns btn10" id="9" onclick="check(9)"></button>
+     <button class="btns btn11" id="10" onclick="check(10)"></button>
+     <button class="btns btn12" id="11" onclick="check(11)"></button>
+     <button class="btns btn13" id="12" onclick="check(12)"></button>
+     <button class="btns btn14" id="13" onclick="check(13)"></button>
+     <button class="btns btn15" id="14" onclick="check(14)"></button>
+     <button class="btns btn16" id="15" onclick="check(15)"></button>
+     <button class="btns btn17" id="16" onclick="check(16)"></button>
+     <button class="btns btn18" id="17" onclick="check(17)"></button>
+     <button class="btns btn19" id="18" onclick="check(18)"></button>
+     <button class="btns btn20" id="19" onclick="check(19)"></button>
+     <button class="btns btn21" id="20" onclick="check(20)"></button>
+     <button class="btns btn22" id="21" onclick="check(21)"></button>
+     <button class="btns btn23" id="22" onclick="check(22)"></button>
+     <button class="btns btn24" id="23" onclick="check(23)"></button>
+     <button class="btns btn25" id="24" onclick="check(24)"></button>
+    </div>
+ </div>
+
+ <div class="moves" id="moves">Moves: 0</div>
+ <div class="time" id="time">Time: 0 s</div>
+ <button class="reset">Reset</button>
+
+</div>
+
+<div class="win" id="win">
+  <div class="youwin">YOU WIN!!!</div>
+ <div class="score" id="score">Score: </div>
+ <div class="totmov" id="totmov">Total Moves : </div>
+ <div class="timetaken" id="timetaken">Time Taken: </div>
+ <button class="close" onclick="toggle(); shuffle();">Play Again</button>
+
+</div>
+
+<script src="app.js"></script> 
+</body>
+
+<!-- <footer>
+  <div id="bottom">Made with <a href ="https://thumbs.dreamstime.com/z/error-page-not-found-pink-heart-split-half-91274221.jpg" ><span id="heart">&hearts;</span></a>by Visakan for <a  id="delta" href="https://delta.nitt.edu/">Delta Force Nitt</a> Inductions </div> 
+</footer> -->
+
+</html>

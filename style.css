@@ -1,0 +1,211 @@
+
+body {
+    background-image: radial-gradient(circle, #ffecb7, #ffdbae, #ffcbab, #ffbcae, #ffaeb5, #f7a9c2, #eba6ce, #d8a6da, #c0ace4, #a5b1e8, #8cb5e5, #79b8dd);
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 2%;
+    position:relative;
+  /*margin-bottom: 20%; */
+}
+body #title{
+    position: absolute;
+    font-size: 120px;
+    font-family: 'Mate SC', serif;
+    background: -webkit-linear-gradient( #c31432, #a10043, #780049, #4d0845, #240b36);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+  }
+  body h1{
+    position: fixed;
+    left: 1%;
+    top:20%
+  }
+  body h2{
+    position: fixed;
+    left: 4%;
+    top:35%;
+  }
+
+.small-grid {
+    display: grid;
+    width: 150px;
+    grid-template-columns: 50px 50px 50px;
+    grid-template-rows: 50px 50px 50px;
+    border: 3px solid black;
+    padding: 1px;
+    margin-left: 30%;
+    
+}
+.small-grid div {
+  border: 4px solid #000000;
+}
+.big-grid {
+    display: grid;
+    width: 400px;
+  grid-template-columns: 80px 80px 80px 80px 80px;
+  grid-template-rows: 80px 80px 80px 80px 80px;
+  /*border: 3px solid black; */
+  margin-top: 10%;
+}
+button {
+  
+    background-color: #54ca8fc7;
+    border: 5px solid #5a5a5a;
+    outline: none;
+    cursor: pointer;
+    }
+.btn7, .btn8, .btn9, .btn12, .btn13, .btn14, .btn17, .btn18, .btn19 {     
+     border: 5px solid #2e2e2e;
+  }
+  .btn10, .btn15, .btn20 {
+      border-left: 5px solid #2e2e2e;
+  }
+  .btn6, .btn11, .btn16 {
+    border-right: 5px solid #2e2e2e;
+}
+.btn2, .btn3, .btn4 {
+    border-bottom: 5px solid #2e2e2e;
+}
+.btn22, .btn23, .btn24 {
+    border-top: 5px solid #2e2e2e;
+    }
+/* #btn25 {
+  background-color: rgb(196, 158, 109);
+} */
+
+.reset {
+  position: absolute;
+  top: 25%;
+  left: 71%;
+  padding: 3px;
+  background-color: blanchedalmond;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 20px;
+}
+.reset:hover {
+  background-color: rgb(224, 215, 202);
+  transform: translateY(-2px);
+}
+.reset:active {
+  background-color: rgb(142, 230, 155);
+  transform: translateY(1px);
+}
+.moves {
+  position: absolute;
+  top: 12.5%;
+  left: 70%;
+  padding: 3px;
+  font-size: 25px;
+}
+.time {
+  position: absolute;
+  top: 17.5%;
+  left: 70%;
+  padding: 3px;
+  font-size: 25px;
+}
+
+#screen.blur {
+  filter: blur(15px);
+  user-select: none;
+  pointer-events: none; 
+ 
+}
+
+#win {
+  display: flex;
+  position: fixed;
+  background-image: linear-gradient(to right, #ffefba, #ffeacd, #ffeae5, #fff0f8, #fff7ff, #fff7ff, #fff7ff, #fff7ff, #fff0f8, #ffeae5, #ffeacd, #ffefba);
+  justify-content: center;
+  flex-direction: column;
+  width: 600px;
+  height: 300px;
+  text-align: 200px left;
+  border: 2px solid black;
+  border-radius: 10px; 
+  opacity: 0;
+  visibility: hidden; 
+}
+.close {
+  position: absolute;
+  left: 43%;
+  bottom: 8%;
+  width: 120px;
+  height: 35px;
+  font-size: 20px;
+  background-color: #aa8ae6;
+  border: 2px solid black;
+  font-weight: bolder;
+  border-radius: 3px;
+}
+.close:hover {
+  background-color: #c6b5e2;
+  transform: translatey(-2px);
+}
+.close:active {
+  background-color: #7c43d8;
+  transform: translatey(1px);
+} 
+.youwin {
+  font-size: 30px;
+  position:absolute;
+  color: #e93939;
+  text-shadow: 10px 10px 30px #f73939;
+  top: 3%;
+  left: 36.5%;
+}
+#win.popup {
+  visibility: visible;
+  opacity: 1;
+  
+}
+#score, #totmov,  #timetaken {
+  position: relative;
+  font-size: 30px;
+  left: 25%;
+}
+
+
+
+
+
+
+
+
+ /*#bottom {
+  position:fixed;
+  width:100%;
+  bottom: 0%;
+  left: 0%;
+  padding: 10px;
+  text-align: center;
+  background-color: #79b8dd; 
+  font-weight: bold;
+}
+#heart {
+  display: inline-block;
+  width: 20px;
+  line-height: 10px;
+  animation-name: heartbeat;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  color: #e01818;
+  text-shadow: 0px 0px 3px rgb(211, 44, 245);
+}
+@keyframes heartbeat {
+  0% {
+    font-size: 17px
+  }
+  100% {
+    font-size: 20px
+  
+}
+}
+
+#delta {
+  color: #0a7c0a;
+} */
