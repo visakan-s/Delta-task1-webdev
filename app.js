@@ -133,7 +133,7 @@ function toggle() {
     blurscrn.classList.toggle('blur')
     var winscrn = document.querySelector('#win');
     winscrn.classList.toggle('popup')
-    sco = ((30000/seconds)*(10/mov)).toFixed(0);
+    sco = ((30000/seconds)*(100/mov)).toFixed(0);
     score.innerHTML = "Score: " + sco;
     timetaken.innerHTML = "Time Taken: " + seconds + " s";
     totmov.innerHTML = "Total Moves: " + mov;   
