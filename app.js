@@ -3,47 +3,55 @@ const smallGrid = document.querySelectorAll('.items');
 let moves = document.querySelector('.moves');
 let time = document.querySelector('.time');
 let reset =document.querySelector('.reset');
-let colorarray =['#4e8ada', '#4e8ada', '#4e8ada', '#4e8ada', '#ff4b4b', '#ff4b4b', '#ff4b4b', '#ff4b4b', '#ae20da', '#ae20da', '#ae20da', '#ae20da', '#18cf30', '#18cf30', '#18cf30', '#18cf30','#e2a344', '#e2a344', '#e2a344', '#e2a344','#e8eb59', '#e8eb59', '#e8eb59', '#e8eb59' ];
-let mov=0;
-let blackindex=24;
-let clickindex;
-let minimumMoves = 1;
-let minimumTime = 1;
-let highestScorePossible = 3000;
-
-let seconds = 0;
-let interval = null;
-let startclick =true;
 let timetaken = document.querySelector('.timetaken');
 let totmov = document.querySelector('.totmov');
 let score = document.querySelector('.score');
-
+let colorarray = ['#000000','#4e8ada', '#4e8ada', '#4e8ada', '#4e8ada', '#ff4b4b', '#ff4b4b', '#ff4b4b', '#ff4b4b', '#ae20da', '#ae20da', '#ae20da', '#ae20da', '#18cf30', '#18cf30', '#18cf30', '#18cf30','#e2a344', '#e2a344', '#e2a344', '#e2a344','#e8eb59', '#e8eb59', '#e8eb59', '#e8eb59' ];
+let clrarr = [];
+let mov=0;
+let blackindex;
+let clickindex;
+let minimumMoves = 10;
+let minimumTime = 10;
+let highestScorePossible = 30000;
+let seconds = 0;
+let interval = null;
+let startclick =true;
 var sco;
-//score = ((3000/seconds)*(3000/mov));
 
-
-
+for(i=1;i<25;i++){
+    clrarr[i-1]=colorarray[i];
+}
 
 function random() {
  for(i=0;i<24;i++){
     let j=Math.floor(Math.random()*(24-i));
     [colorarray[i], colorarray[j]]=[colorarray[j], colorarray[i]];
+    [clrarr[i], clrarr[j]]=[clrarr[j], clrarr[i]];
  }
     //console.log(colorarray);
 }
+
 fill();
 function fill() {
-    bigGrid[24].style.backgroundColor= '#000000';
+    //bigGrid[24].style.backgroundColor= '#000000';
     random();
-    for(i=0; i<24; i++){
+    for(i=0; i<25; i++){
     bigGrid[i].style.backgroundColor = colorarray[i];
     }
+
+    for(i=0; i<25; i++){
+        if(bigGrid[i].style.backgroundColor ==  'rgb(0, 0, 0)') 
+            blackindex=i;
+    }}
+
     random();
     for(i=0; i<9; i++){
-        smallGrid[i].style.backgroundColor = colorarray[i];
+        smallGrid[i].style.backgroundColor = clrarr[i];
+        
         } 
         start = new Date().getTime();
-}
+
 
 function shuffle() {
     blackindex=24;
@@ -65,7 +73,7 @@ reset.addEventListener('click',function(){
  
    function swap(clickindex){
        //alert(clickindex);
-     let temp = bigGrid[clickindex].style.backgroundColor;
+    let temp = bigGrid[clickindex].style.backgroundColor;
     bigGrid[clickindex].style.backgroundColor = bigGrid[blackindex].style.backgroundColor;
     bigGrid[blackindex].style.backgroundColor = temp; 
     blackindex = clickindex;
@@ -75,8 +83,6 @@ reset.addEventListener('click',function(){
     var movetune=new Audio("move.mp3");
         movetune.play(); 
    }
-
-
 
 /*for(a=0;a<25;a++){
     bigGrid[a].addEventListener('click', function(e) {
@@ -133,7 +139,7 @@ function toggle() {
     blurscrn.classList.toggle('blur')
     var winscrn = document.querySelector('#win');
     winscrn.classList.toggle('popup')
-    sco = ((30000/seconds)*(100/mov)).toFixed(0);
+    sco = ((300000/seconds)*(10/mov)).toFixed(0);
     score.innerHTML = "Score: " + sco;
     timetaken.innerHTML = "Time Taken: " + seconds + " s";
     totmov.innerHTML = "Total Moves: " + mov;   
